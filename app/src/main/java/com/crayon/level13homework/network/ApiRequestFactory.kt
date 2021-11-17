@@ -5,12 +5,12 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 object ApiRequestFactory {
 
-    private const val baseUrl = "https://picsum.photos/"
+    private const val baseUrl = "https://picsum.photos/v2/"
 
-    val retrofit: Service = Retrofit.Builder()
+    val retrofit: RetrofitAPI = Retrofit.Builder()
         .baseUrl(baseUrl)
         .addConverterFactory(GsonConverterFactory.create())
         .build()
-        .create(Service::class.java)
+        .create(RetrofitAPI::class.java)
 
 }

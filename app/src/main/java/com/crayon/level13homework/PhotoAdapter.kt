@@ -4,8 +4,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.crayon.level13homework.databinding.ItemPhotoBinding
-import com.crayon.level13homework.models.Photo
+import com.crayon.level13homework.databinding.ItemGridBinding
 import com.crayon.level13homework.models.PhotoItem
 
 class PhotoAdapter: RecyclerView.Adapter<PhotoAdapter.ViewHolder>() {
@@ -14,8 +13,8 @@ class PhotoAdapter: RecyclerView.Adapter<PhotoAdapter.ViewHolder>() {
     var onClick: (PhotoItem) -> Unit = {}
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_photo, parent, false)
-        val binding = ItemPhotoBinding.bind(view)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_grid, parent, false)
+        val binding = ItemGridBinding.bind(view)
         return ViewHolder(binding)
     }
 
@@ -35,16 +34,17 @@ class PhotoAdapter: RecyclerView.Adapter<PhotoAdapter.ViewHolder>() {
         return photoList.size
     }
 
-    fun updatePhotos(items: Photo) {
+    fun updatePhotos(items: List<PhotoItem>) {
         this.photoList.addAll(items)
         notifyItemRangeInserted(this.photoList.size, items.size)
     }
 
-    inner class ViewHolder(private val binding: ItemPhotoBinding): RecyclerView.ViewHolder(binding.root) {
-        fun bind(photo: PhotoItem, onClick: View.OnClickListener) {
-            binding.item = photo
+    inner class ViewHolder(private val binding: ItemGridBinding): RecyclerView.ViewHolder(binding.root) {
+        fun bind(item: PhotoItem, onClick: View.OnClickListener) {
+            binding.item = item
             binding.root.setOnClickListener(onClick)
         }
     }
+
 
 }

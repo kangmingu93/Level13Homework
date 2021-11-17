@@ -4,6 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.crayon.level13homework.models.Photo
+import com.crayon.level13homework.models.PhotoItem
 import com.crayon.level13homework.repository.PhotoRepository
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
