@@ -1,10 +1,9 @@
 package com.crayon.level13homework
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
+import androidx.appcompat.app.AppCompatActivity
 import com.crayon.level13homework.databinding.ActivityDetailBinding
-import com.crayon.level13homework.databinding.ActivityMainBinding
 import com.crayon.level13homework.models.PhotoItem
 
 class DetailActivity : AppCompatActivity() {

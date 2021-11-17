@@ -20,38 +20,41 @@
             android:layout_height="wrap_content"
             android:contentDescription="@string/photo_description"
             android:adjustViewBounds="true"
-            app:imagePullUrl="@{item.download_url}"
+            app:imageUrl="@{item.download_url}"
             app:placeholder="@{@drawable/ic_launcher_foreground}"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             tools:src="@drawable/ic_launcher_foreground"/>
 
-        <TextView
-            android:id="@+id/tv_author"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:textColor="@color/black"
-            android:textSize="16sp"
-            android:text="@{@string/format_author(item.author)}"
-            app:layout_constraintTop_toBottomOf="@id/iv_photo"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            tools:text="Author: Alejandro Escamilla"/>
+            android:padding="10dp"
+            android:orientation="vertical"
+            android:background="@color/black_35"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
 
-        <TextView
-            android:id="@+id/tv_size"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:textColor="@color/black"
-            android:textSize="16sp"
-            android:text="@{@string/format_size(item.width, item.height)}"
-            app:layout_constraintTop_toBottomOf="@id/tv_author"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            tools:text="Size: 5616 x 3744"/>
+            <TextView
+                android:id="@+id/tv_author"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:text="@{@string/format_author(item.author)}"
+                tools:text="Author: Alejandro Escamilla"/>
+
+            <TextView
+                android:id="@+id/tv_size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:text="@{@string/format_size(item.width, item.height)}"
+                tools:text="Size: 5616 x 3744"/>
+
+        </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

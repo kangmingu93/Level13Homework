@@ -1,9 +1,10 @@
-package com.crayon.level13homework
+package com.crayon.level13homework.adapters
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.crayon.level13homework.R
 import com.crayon.level13homework.databinding.ItemGridBinding
 import com.crayon.level13homework.models.PhotoItem
 

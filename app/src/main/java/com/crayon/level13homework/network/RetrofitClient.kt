@@ -3,7 +3,7 @@ package com.crayon.level13homework.network
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
-object ApiRequestFactory {
+object RetrofitClient {
 
     private const val baseUrl = "https://picsum.photos/v2/"
 
